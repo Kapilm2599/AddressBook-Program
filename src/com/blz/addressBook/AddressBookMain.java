@@ -10,13 +10,8 @@ public class AddressBookMain {
 		Scanner scanner = new Scanner(System.in); 
 		int Number;
 
-		/**
-		 * Enter number 1 to add this contacts details 
-		 * Enter number 2 to displaying
-		 * contact details
-		 */
 		do {
-			System.out.println(" 1. Add Contact \n 2. Display contact \n");
+			System.out.println(" 1. Add Contact \n 2. Display contact \n 3. Edit contact");
 			System.out.println("Enter the  Number: ");
 
 			Number = scanner.nextInt(); 
@@ -27,12 +22,15 @@ public class AddressBookMain {
 			case 2:
 				addressBook.showContacts();
 				break;
+			case 3:
+				addressBook.editContact();
+				break;
 			default:
 				System.out.println(" !!!Invalid Input!!! ");
 				break;
 
 			}
-		} while (Number != 3); 
+		} while (Number < 4); 
 
 	}
 

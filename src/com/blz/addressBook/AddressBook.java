@@ -7,9 +7,10 @@ public class AddressBook {
 	
 	Scanner scanner = new Scanner(System.in);
 	ArrayList<ContactPerson> contactsArrayList = new ArrayList<ContactPerson>();
-	ContactPerson contact = new ContactPerson(); 
-
+	
 	public void addContact() {
+		ContactPerson contact = new ContactPerson(); 
+
 		System.out.println("Enter your FirstName: ");
 		contact.setFirstName(scanner.next());
 		System.out.println("Enter your LastName: ");
@@ -31,7 +32,7 @@ public class AddressBook {
 	}
 
 	public void showContacts() {
-		System.out.println(contact.toString());
+		
 		for (int i = 0; i < contactsArrayList.size(); i++) {
 			ContactPerson contacts = contactsArrayList.get(i);
 			System.out.println(contacts.toString());
